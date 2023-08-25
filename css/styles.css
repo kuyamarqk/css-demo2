@@ -1,0 +1,215 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+  }
+  
+  .interactive-elements {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .btn-transition {
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-transition:hover {
+    background-color: #333;
+    
+  }
+  
+  .slider-transform {
+    width: 80%;
+    margin: 1rem auto;
+    transform-origin: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .toggle-label {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .toggle-slider {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-transform:checked + .toggle-slider {
+    background-color: #4caf50;
+    padding: 10px;
+  }
+  
+  .pseudo-elements {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .decorative-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    margin: 0 auto;
+  }
+  
+  .decorative-box::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    border-radius: 50%;
+  }
+  
+  .three-d-elements {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .card {
+    perspective: 1000px;
+    width: 200px;
+    height: 260px;
+    margin: 0 auto;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #f0f0f0;
+  }
+  
+  .card-back {
+    background-color: #007bff;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  /* Previous CSS rules */
+
+@media screen and (max-width: 768px) {
+    /* Adjust header */
+    header {
+      padding: 0.5rem 0;
+    }
+  
+    /* Adjust interactive elements */
+    .interactive-elements {
+      padding: 1rem 0;
+    }
+  
+    .btn-transition {
+      font-size: 14px;
+    }
+  
+    .slider-transform {
+      width: 90%;
+    }
+  
+    .toggle-slider {
+      width: 30px;
+      height: 15px;
+    }
+  
+    /* Adjust pseudo-elements */
+    .decorative-box::before {
+      width: 30px;
+      height: 30px;
+    }
+  
+    /* Adjust 3D elements */
+    .card {
+      width: 150px;
+      height: 200px;
+    }
+  }
+  
+  /* Additional media query for smaller screens */
+  @media screen and (max-width: 480px) {
+    /* Adjust header */
+    header {
+      font-size: 1.5rem;
+    }
+  
+    /* Adjust interactive elements */
+    .interactive-elements {
+      padding: 0.5rem 0;
+    }
+  
+    .btn-transition {
+      font-size: 12px;
+      padding: 20px;
+    }
+  
+    .slider-transform {
+      width: 95%;
+    }
+    .toggle-transform:checked + .toggle-slider {
+        background-color: #4caf50;
+        padding: 10px;
+      }
+  
+    /* Adjust pseudo-elements */
+    .decorative-box::before {
+      width: 20px;
+      height: 20px;
+    }
+  
+    /* Adjust 3D elements */
+    .card {
+      width: 120px;
+      height: 160px;
+    }
+  }
+  
