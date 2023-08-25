@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
   }
-  
   header {
     text-align: center;
     background-color: #333;
@@ -16,20 +15,47 @@ body {
     padding: 2rem 0;
   }
   
-  .btn-transition {
-    padding: 20px;
-    background-color: #007bff;
+  /* Previous CSS rules */
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #333;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 20px;
     transition: background-color 0.3s ease;
   }
   
-  .btn-transition:hover {
-    background-color: #333;
-    
+  .dark-mode-toggle:hover {
+    background-color: #555;
   }
+  
+  /* Dark Mode Styles */
+  body.dark-mode {
+    background-color: #111;
+    color: white;
+  }
+  
+  /* Update other elements' styles for dark mode */
+  body.dark-mode header {
+    background-color: #333;
+  }
+  
+  body.dark-mode .card-front {
+    background-color: #222;
+  }
+  
+  body.dark-mode .card-back {
+    background-color: #007bff;
+  }
+  
+  /* Add more element styles for dark mode as needed */
+  
   
   .slider-transform {
     width: 80%;
@@ -86,6 +112,7 @@ body {
   .three-d-elements {
     text-align: center;
     padding: 2rem 0;
+    margin-bottom: 20px;
   }
   
   .card {
@@ -93,6 +120,7 @@ body {
     width: 200px;
     height: 260px;
     margin: 0 auto;
+    border-radius: 12px;
   }
   
   .card-inner {
@@ -115,6 +143,7 @@ body {
     align-items: center;
     position: absolute;
     backface-visibility: hidden;
+    border-radius: 12px;
   }
   
   .card-front {
@@ -132,9 +161,8 @@ body {
     background-color: #333;
     color: white;
     padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    
   }
   /* Previous CSS rules */
 

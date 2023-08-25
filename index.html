@@ -12,10 +12,10 @@
   </header>
 
   <section class="interactive-elements">
-    <button class="btn-transition">Transition</button>
+    <button class="dark-mode-toggle">Toggle Dark Mode</button>
     <input type="range" class="slider-transform">
     <label class="toggle-label">
-      <input type="checkbox" class="toggle-transform">
+      <input type="checkbox" class="toggle-transform"> 
       <span class="toggle-slider"></span>
     </label>
   </section>
@@ -27,8 +27,8 @@
   <section class="three-d-elements">
     <div class="card">
       <div class="card-inner">
-        <div class="card-front">Front</div>
-        <div class="card-back">Back</div>
+        <div class="card-front">Hover your Cursor here</div>
+        <div class="card-back">Remove your Cursor here</div>
       </div>
     </div>
   </section>
@@ -36,5 +36,14 @@
   <footer class="footer">
     <p>&copy; 2023 Kuyamarqk. All rights reserved.</p>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const darkModeToggle = document.querySelector('.dark-mode-toggle');
+  
+      darkModeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+      });
+    });
+  </script>
 </body>
 </html>
